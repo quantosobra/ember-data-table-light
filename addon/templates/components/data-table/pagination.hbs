@@ -1,0 +1,27 @@
+<li class="{{if (eq firstPage currentPage) 'disabled'}}">
+  <a href="#" {{action 'pageSelected' firstPage}}>
+    <i class="fa fa-angle-double-left"></i>
+  </a>
+</li>
+<li class="{{if (not previousPage) 'disabled'}}">
+  <a href="#" {{action 'pageSelected' previousPage}}>
+    <i class="fa fa-angle-left"></i>
+  </a>
+</li>
+<li>
+  {{#x-select value=currentPage action='pageSelected'}}
+    {{#each pageNumbers as |pageNumber|}}
+      {{#x-option value=pageNumber}}{{pageNumber}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+</li>
+<li class="{{if (not nextPage) 'disabled'}}">
+  <a href="#" {{action 'pageSelected' nextPage}}>
+    <i class="fa fa-angle-right"></i>
+  </a>
+</li>
+<li class="{{if (eq lastPage currentPage) 'disabled'}}">
+  <a href="#" {{action 'pageSelected' lastPage}}>
+    <i class="fa fa-angle-double-right"></i>
+  </a>
+</li>

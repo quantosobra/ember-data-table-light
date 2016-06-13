@@ -1,0 +1,147 @@
+@import './table';
+
+$accent-color: #8CC63F;
+
+html, body {
+  min-height: 100%;
+  min-width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F3F3F3;
+}
+
+.navbar {
+  margin: 0;
+
+  .navbar-brand {
+    color: $accent-color;
+    font-size: 16px;
+
+    img {
+      height: 32px;
+      display: inline-block;
+      margin-top: -15px;
+    }
+
+    span {
+      font-size: 12px;
+      vertical-align: super;
+      text-transform: uppercase;
+      color: $accent-color;
+    }
+  }
+
+  .navbar-nav > li > a {
+    font-size: 14px;
+
+    &.github {
+      font-size: 24px;
+    }
+  }
+
+  .navbar-nav > li > a:focus,
+  .navbar-nav > li > a:hover {
+    color: $accent-color;
+  }
+
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:focus,
+  .navbar-nav > .active > a:hover {
+    color: $accent-color;
+    background-color: transparent;
+  }
+}
+
+.panel {
+  width: 75%;
+  margin: 2.5% auto;
+  position: relative;
+
+  .panel-heading {
+    background-color: $accent-color;
+    border-color: darken($accent-color, 10%);
+    padding: 0;
+
+    a {
+      color: #F9F9F9;
+      text-decoration: none;
+
+      .panel-title {
+        padding: 15px;
+      }
+    }
+  }
+
+  .code-snippet {
+    background-color: #f8f8f8;
+    max-height: 500px;
+    overflow: auto;
+
+    .nav-tabs {
+      li > a {
+        color: #8A8A8A;
+        border-radius: 2px 2px 0 0;
+        font-size: 12px;
+      }
+
+      li.active > a {
+        background-color: #f8f8f8;
+        color: #696969;
+      }
+    }
+
+    .tab-content {
+      > .active {
+        padding: 15px 15px 0px 15px;
+      }
+    }
+
+    pre {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.table-container {
+  overflow-y: auto;
+
+  &.fixed-header {
+    overflow-y: hidden;
+    margin-bottom: 15px;
+  }
+}
+
+.pagination {
+  > li {
+    > a,
+    > select {
+      padding: 12px 18px;
+    }
+
+    > select {
+      position: relative;
+      float: left;
+    }
+  }
+}
+
+.column-chooser {
+  list-style: none;
+  padding-left: 10px;
+
+  label {
+    font-weight: normal;
+  }
+}
+
+.tip {
+  text-align: center;
+  font-size: 13px;
+  color: #4E4E4E;
+
+  .icon-info {
+    color: $accent-color;
+    margin-right: 3px;
+  }
+}

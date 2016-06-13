@@ -1,0 +1,50 @@
+{{#data-table.header}}
+  {{#if search}}
+    <div class="col-xs-9 col-sm-11">
+      {{component searchComponent search=(action 'makeSearch')}}
+    </div>
+  {{/if}}
+
+  {{#if columnChooser}}
+    <div class="col-xs-3 col-sm-1 text-right">
+      {{#bs-dropdown closeOnMenuClick=false}}
+        {{#bs-dropdown-button class='btn btn-default'}}<i class="fa fa-cog"></i>{{/bs-dropdown-button}}
+        {{#bs-dropdown-menu}}
+          {{component columnChooserComponent table=table columnVisibilityChanged=(action 'columnVisibilityChanged')}}
+        {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}
+    </div>
+  {{/if}}
+{{/data-table.header}}
+
+{{#light-table table height=height as |t|}}
+  {{t.head
+    iconAscending='fa fa-sort-asc'
+    iconDescending='fa fa-sort-desc'
+    onColumnClick=(action 'onColumnClick')
+  }}
+
+  {{#t.body multiSelect=true as |body|}}
+    {{#if (and isLoading loadingComponent)}}
+      {{#body.loader}}
+        {{component loadingComponent table=table}}
+      {{/body.loader}}
+    {{/if}}
+
+    {{#if (and (not isLoading) table.isEmpty emptyComponent)}}
+      {{#body.no-data}}
+        {{component emptyComponent table=table}}
+      {{/body.no-data}}
+    {{/if}}
+  {{/t.body}}
+{{/light-table}}
+
+{{#data-table.footer}}
+  {{#if (and hasSelection bulkActions)}}
+    {{component bulkActionsComponent selectedRows=table.selectedRows reloadTable=(action 'reloadTable')}}
+  {{/if}}
+
+  {{#if pagination}}
+    {{component paginationComponent table=table currentPage=currentPage totalPages=pageNumbers pageChanged=(action 'reloadTable')}}
+  {{/if}}
+{{/data-table.footer}}

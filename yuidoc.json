@@ -1,0 +1,31 @@
+{
+  "name": "ember-data-table-light",
+  "description": "Tables for Ember Data models based on Ember Light Table.",
+  "url": "http://github.com/quantosobra/ember-data-table-light",
+  "options": {
+    "enabledEnvironments": ["production"],
+    "paths": [
+      "app",
+      "addon"
+    ],
+    "external": {
+      "data": [
+        {
+          "base": "http://emberjs.com/api/",
+          "json": "http://builds.emberjs.com/tags/v2.4.0/ember-docs.json"
+        },
+        {
+          "base": "http://emberjs.com/api/data/",
+          "json": "http://builds.emberjs.com/tags/v2.5.1/ember-data-docs.json"
+        }
+      ]
+    },
+    "exclude": "vendor",
+    "outdir": "docs",
+    "linkNatives": true,
+    "quiet": true,
+    "parseOnly": false,
+    "lint": false,
+    "nocode": false
+  }
+}

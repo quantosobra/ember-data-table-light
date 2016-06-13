@@ -1,0 +1,10 @@
+{{#each table.columns as |column|}}
+  {{#if column.hideable}}
+    <li>
+      <label>
+        {{input type='checkbox' checked=(not column.hidden) change=(action 'checkboxChanged' column)}}
+        <span>{{column.label}}</span>
+      </label>
+    </li>
+  {{/if}}
+{{/each}}

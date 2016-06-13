@@ -1,0 +1,100 @@
+{
+  "maximumLineLength": 120,
+
+  "jsDoc": {
+    "checkParamExistence": true,
+    "checkParamNames": true,
+    "requireParamTypes": true,
+    "checkRedundantParams": true,
+    "checkReturnTypes": true,
+    "checkRedundantReturns": true,
+    "checkTypes": "capitalizedNativeCase",
+    "enforceExistence": false,
+    "requireNewlineAfterDescription": true,
+    "requireDescriptionCompleteSentence": true,
+    "requireParamDescription": true,
+    "requireReturnDescription": true
+  },
+
+  "disallowEmptyBlocks": true,
+  "disallowIdenticalDestructuringNames": true,
+  "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
+  "disallowMixedSpacesAndTabs": true,
+  "disallowMultiLineTernary": true,
+  "disallowMultipleLineStrings": true,
+  "disallowMultipleSpaces": {
+    "allowEOLComments": true
+  },
+  "disallowMultipleVarDecl": {
+    "allExcept": ["undefined"]
+  },
+  "disallowNamedUnassignedFunctions": true,
+  "disallowNestedTernaries": true,
+  "disallowNewlineBeforeBlockStatements": true,
+  "disallowOperatorBeforeLineBreak": true,
+  "disallowPaddingNewlinesInBlocks": true,
+  "disallowShorthandArrowFunctions": false,
+  "disallowSpaceAfterObjectKeys": {
+    "allExcept": ["aligned", "methods"]
+  },
+  "disallowSpaceAfterPrefixUnaryOperators": true,
+  "disallowSpaceBeforeComma": true,
+  "disallowSpaceBeforePostfixUnaryOperators": true,
+  "disallowSpaceBeforeSemicolon": true,
+  "disallowSpacesInCallExpression": true,
+  "disallowSpacesInFunction": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInsideBrackets": true,
+  "disallowSpacesInsideParentheses": true,
+  "disallowSpacesInsideParenthesizedExpression": true,
+  "disallowTabs": true,
+  "disallowTrailingComma": true,
+  "disallowTrailingWhitespace": true,
+  "disallowUnusedParams": true,
+  "disallowYodaConditions": true,
+
+  "requireCamelCaseOrUpperCaseIdentifiers": true,
+  "requireCapitalizedComments": true,
+  "requireCapitalizedConstructors": true,
+  "requireCurlyBraces": true,
+  "requireDotNotation": true,
+  "requireKeywordsOnNewLine": ["else", "catch"],
+  "requireLineFeedAtFileEnd": true,
+  "requireNumericLiterals": true,
+  "requireObjectKeysOnNewLine": {
+    "allExcept": ["sameLine"]
+  },
+  "requirePaddingNewLinesAfterUseStrict": true,
+  "requireParenthesesAroundArrowParam": true,
+  "requireParenthesesAroundIIFE": true,
+  "requireSemicolons": true,
+  "requireSpaceAfterBinaryOperators": true,
+  "requireSpaceAfterComma": true,
+  "requireSpaceAfterKeywords": [
+    "do",
+    "for",
+    "if",
+    "else",
+    "switch",
+    "case",
+    "try",
+    "catch",
+    "while",
+    "return",
+    "typeof"
+  ],
+  "requireSpaceAfterLineComment": true,
+  "requireSpaceBeforeBinaryOperators": true,
+  "requireSpaceBeforeBlockStatements": 1,
+  "requireSpaceBeforeObjectValues": true,
+  "requireSpaceBetweenArguments": true,
+  "requireSpacesInConditionalExpression": true,
+  "requireSpacesInForStatement": true,
+  "requireSpacesInFunction": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpread": true,
+  "validateIndentation": 2,
+  "validateLineBreaks": "LF"
+}

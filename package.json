@@ -1,7 +1,7 @@
 {
   "name": "ember-data-table-light",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Tables for Ember Data models based on Ember Light Table.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,41 +11,59 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:quantosobra/ember-data-table-light.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "QuantoSobra <quantosobra@quantosobra.com.br>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
-    "ember-ajax": "0.7.1",
+    "ember-addon-genie": "0.0.4",
+    "ember-ajax": "2.4.1",
     "ember-cli": "2.4.0",
     "ember-cli-app-version": "^1.0.0",
+    "ember-cli-blanket": "0.9.5",
     "ember-cli-dependency-checker": "^1.2.0",
-    "ember-cli-htmlbars": "^1.0.1",
+    "ember-cli-es5-shim": "0.3.0",
+    "ember-cli-github-pages": "0.1.0",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.3.1",
-    "ember-cli-qunit": "^1.2.1",
-    "ember-cli-release": "0.2.8",
+    "ember-cli-mirage": "0.2.0",
+    "ember-cli-qunit": "^2.0.2",
+    "ember-cli-release": "1.0.0-beta.1",
+    "ember-cli-sass": "5.3.1",
     "ember-cli-sri": "^2.0.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "^2.4.0",
+    "ember-cli-yuidoc": "0.8.3",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-load-initializers": "^0.5.0",
+    "ember-lodash": "0.0.9",
     "ember-resolver": "^2.0.3",
-    "ember-try": "^0.1.2",
+    "ember-try": "^0.2.2",
     "loader.js": "^4.0.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "table",
+    "ember-data"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.5"
+    "ember-bootstrap": "0.7.2",
+    "ember-cli-babel": "^5.1.6",
+    "ember-cli-htmlbars": "^1.0.5",
+    "ember-light-table": "1.0.0-beta.6",
+    "ember-data": "^2.5.3",
+    "ember-truth-helpers": "1.2.0",
+    "emberx-select": "2.1.2"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "http://quantosobra.github.io/ember-data-table-light"
   }
 }

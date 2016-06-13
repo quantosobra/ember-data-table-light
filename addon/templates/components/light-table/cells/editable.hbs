@@ -1,0 +1,5 @@
+{{#if isEditing}}
+  {{input class='form-control' value=editedValue enter=(action 'exitEditMode') focus-out=(action 'exitEditMode')}}
+{{else}}
+  {{value}}
+{{/if}}

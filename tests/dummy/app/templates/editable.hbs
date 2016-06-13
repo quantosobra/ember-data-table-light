@@ -1,0 +1,26 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="table-1">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#code-snippet" aria-expanded="true" aria-controls="code-snippet">
+        <h4 class="panel-title">Editable Example <span class="code-icon fa fa-code pull-right"></span></h4>
+      </a>
+    </div>
+    <div id="code-snippet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="table-1">
+      <div class="panel-body code-snippet">
+       <ul class="nav nav-tabs" role="tablist">
+         <li role="presentation" class="active"><a href="#component" aria-controls="component" role="tab" data-toggle="tab">component.js</a></li>
+         <li role="presentation"><a href="#template" aria-controls="template" role="tab" data-toggle="tab">template.hbs</a></li>
+       </ul>
+       <div class="tab-content">
+         <div role="tabpanel" class="tab-pane fade in active" id="component">{{!code-snippet name="editable-table.js"}}</div>
+         <div role="tabpanel" class="tab-pane fade" id="template">{{!code-snippet name="editable-table.hbs"}}</div>
+       </div>
+      </div>
+    </div>
+    <div class="panel-body table-container fixed-header">
+      {{!-- BEGIN-SNIPPET editable-table --}}
+      {{data-table 'user' columns=columns height='50vh'}}
+      {{!-- END-SNIPPET --}}
+    </div>
+  </div>
+</div>

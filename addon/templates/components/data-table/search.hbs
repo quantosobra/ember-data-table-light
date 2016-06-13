@@ -1,0 +1,9 @@
+{{input value=searchText class='form-control' placeholder=inputPlaceholder enter='search'}}
+<span class="input-group-btn">
+  <button class="btn btn-default" {{action 'search'}}>
+    {{#if searchButtonIcon}}
+      <i class="{{searchButtonIcon}}"></i>
+    {{/if}}
+    {{searchButtonText}}
+  </button>
+</span>
