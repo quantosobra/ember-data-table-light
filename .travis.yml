@@ -32,6 +32,6 @@ script:
   - 'ember try:one $EMBER_TRY_SCENARIO --- ember test'
 addons:
   code_climate:
-    repo_token: <CODE_CLIMATE_TOKEN_GOES_HERE>
+    repo_token: 1022ae6d8bd75807bb706069bec2646dcb7c0719e6fd8eb3c0629ca344ca37cf
 after_script:
   - codeclimate-test-reporter < lcov.dat
