@@ -1,14 +1,14 @@
 import Ember from 'ember';
 import DataTableState from 'ember-data-table-light/services/data-table-state';
 
-const { warn } = Ember;
+const { inject: { service } } = Ember;
 
 /**
  * @class DataTableStateSimpleAuth
  * @extends DataTableState
  */
 export default DataTableState.extend({
-  session: Ember.inject.service('session'),
+  session: service('session'),
 
   serialize() {
     let state = this._super(...arguments);

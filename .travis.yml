@@ -1,10 +1,13 @@
 language: node_js
 node_js:
-  - '0.12'
+  - "4"
+
 sudo: false
+
 cache:
   directories:
     - node_modules
+
 env:
   - EMBER_TRY_SCENARIO=default
   - EMBER_TRY_SCENARIO=ember-2.3
@@ -14,24 +17,31 @@ env:
   - EMBER_TRY_SCENARIO=ember-release
   - ALLOW_DEPRECATIONS=true EMBER_TRY_SCENARIO=ember-beta
   - ALLOW_DEPRECATIONS=true EMBER_TRY_SCENARIO=ember-canary
+
 matrix:
   fast_finish: true
   allow_failures:
     - env: ALLOW_DEPRECATIONS=true EMBER_TRY_SCENARIO=ember-beta
     - env: ALLOW_DEPRECATIONS=true EMBER_TRY_SCENARIO=ember-canary
+
 before_install:
-  - 'export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH'
   - npm config set spin false
-  - npm install -g npm@^2
-  - npm install -g codeclimate-test-reporter
-install:
   - npm install -g bower
+  - npm install -g codeclimate-test-reporter
+  - npm install phantomjs-prebuilt
+
+install:
   - npm install
   - bower install
+
 script:
-  - 'ember try:one $EMBER_TRY_SCENARIO --- ember test'
+  # Usually, it's ok to finish the test scenario without reverting
+  #  to the addon's original dependency state, skipping "cleanup".
+  - ember try $EMBER_TRY_SCENARIO test --skip-cleanup
+
 addons:
   code_climate:
     repo_token: 1022ae6d8bd75807bb706069bec2646dcb7c0719e6fd8eb3c0629ca344ca37cf
+
 after_script:
   - codeclimate-test-reporter < lcov.dat

@@ -1,8 +1,5 @@
 /* global localStorage */
-import Ember from 'ember';
 import DataTableState from 'ember-data-table-light/services/data-table-state';
-
-const { warn } = Ember;
 
 /**
  * @class DataTableStateLocalStorage

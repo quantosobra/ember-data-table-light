@@ -1,6 +1,5 @@
 /*jshint node:true*/
 module.exports = {
-  "command": "ember test",
   "scenarios": [
     {
       "name": "default",
@@ -12,8 +11,7 @@ module.exports = {
       "name": "ember-2.3",
       "bower": {
         "dependencies": {
-          "ember": "~2.3.0",
-          "ember-data": "~2.3.0"
+          "ember": "~2.3.0"
         }
       }
     },
@@ -21,8 +19,7 @@ module.exports = {
       "name": "ember-2.4",
       "bower": {
         "dependencies": {
-          "ember": "~2.4.0",
-          "ember-data": "~2.4.0"
+          "ember": "~2.4.0"
         }
       }
     },
@@ -30,8 +27,7 @@ module.exports = {
       "name": "ember-2.5",
       "bower": {
         "dependencies": {
-          "ember": "~2.5.0",
-          "ember-data": "~2.5.0"
+          "ember": "~2.5.0"
         }
       }
     },
@@ -39,8 +35,7 @@ module.exports = {
       "name": "ember-2.6",
       "bower": {
         "dependencies": {
-          "ember": "~2.6.0",
-          "ember-data": "~2.6.0"
+          "ember": "~2.6.0"
         }
       }
     },

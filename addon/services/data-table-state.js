@@ -39,7 +39,7 @@ export default Service.extend({
    * @param {mixed} state Table state as returned by `serialize()`.
    * @param {Table} table Object for the table that should be saved.
    */
-  save(identifier, state, table) {
+  save(/* identifier, state, table */) {
     assert('The save method must be implemented by a subclass');
   },
 
@@ -51,7 +51,7 @@ export default Service.extend({
    * @return {mixed} Saved state for the specified table, that will be passed
    *   to `deserialize()`.
    */
-  load(identifier, table) {
+  load(/* identifier, table */) {
     assert('The load method must be implemented by a subclass');
   }
 });
