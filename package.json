@@ -1,6 +1,6 @@
 {
   "name": "ember-data-table-light",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tables for Ember Data models based on Ember Light Table.",
   "directories": {
     "doc": "doc",
