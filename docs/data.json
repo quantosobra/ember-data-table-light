@@ -1,0 +1,1101 @@
+{
+    "project": {
+        "name": "ember-data-table-light",
+        "description": "Tables for Ember Data models based on Ember Light Table.",
+        "url": "http://github.com/quantosobra/ember-data-table-light",
+        "version": "v0.0.1"
+    },
+    "files": {
+        "addon/components/data-table/column-chooser.js": {
+            "name": "addon/components/data-table/column-chooser.js",
+            "modules": {},
+            "classes": {
+                "ColumnChooser": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/data-table/empty.js": {
+            "name": "addon/components/data-table/empty.js",
+            "modules": {},
+            "classes": {
+                "Empty": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/data-table/footer.js": {
+            "name": "addon/components/data-table/footer.js",
+            "modules": {},
+            "classes": {
+                "Footer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/data-table/header.js": {
+            "name": "addon/components/data-table/header.js",
+            "modules": {},
+            "classes": {
+                "Header": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/data-table/loading.js": {
+            "name": "addon/components/data-table/loading.js",
+            "modules": {},
+            "classes": {
+                "Loading": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/data-table/pagination.js": {
+            "name": "addon/components/data-table/pagination.js",
+            "modules": {},
+            "classes": {
+                "Pagination": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/data-table/search.js": {
+            "name": "addon/components/data-table/search.js",
+            "modules": {},
+            "classes": {
+                "Search": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/light-table/cells/checkbox.js": {
+            "name": "addon/components/light-table/cells/checkbox.js",
+            "modules": {},
+            "classes": {
+                "CheckboxCell": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/light-table/cells/editable.js": {
+            "name": "addon/components/light-table/cells/editable.js",
+            "modules": {},
+            "classes": {
+                "EditableCell": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/light-table/columns/checkbox.js": {
+            "name": "addon/components/light-table/columns/checkbox.js",
+            "modules": {},
+            "classes": {
+                "CheckboxColumn": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/data-table.js": {
+            "name": "addon/components/data-table.js",
+            "modules": {},
+            "classes": {
+                "DataTable": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/ember-data-table.js": {
+            "name": "addon/mixins/ember-data-table.js",
+            "modules": {},
+            "classes": {
+                "EmberDataTableMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/table-pagination.js": {
+            "name": "addon/mixins/table-pagination.js",
+            "modules": {},
+            "classes": {
+                "TablePaginationMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/mixins/table-sorting.js": {
+            "name": "addon/mixins/table-sorting.js",
+            "modules": {},
+            "classes": {
+                "TableSortingMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/services/data-table-state-local-storage.js": {
+            "name": "addon/services/data-table-state-local-storage.js",
+            "modules": {},
+            "classes": {
+                "DataTableStateLocalStorage": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/services/data-table-state-simple-auth.js": {
+            "name": "addon/services/data-table-state-simple-auth.js",
+            "modules": {},
+            "classes": {
+                "DataTableStateSimpleAuth": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/services/data-table-state.js": {
+            "name": "addon/services/data-table-state.js",
+            "modules": {},
+            "classes": {
+                "DataTableState": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/configuration.js": {
+            "name": "addon/configuration.js",
+            "modules": {
+                "ember-data-table-light/configuration": 1
+            },
+            "classes": {
+                "Configuration": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "ember-data-table-light/configuration": {
+            "name": "ember-data-table-light/configuration",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "ColumnChooser": 1,
+                "Empty": 1,
+                "Footer": 1,
+                "Header": 1,
+                "Loading": 1,
+                "Pagination": 1,
+                "Search": 1,
+                "CheckboxCell": 1,
+                "EditableCell": 1,
+                "CheckboxColumn": 1,
+                "DataTable": 1,
+                "EmberDataTableMixin": 1,
+                "TablePaginationMixin": 1,
+                "TableSortingMixin": 1,
+                "DataTableStateLocalStorage": 1,
+                "DataTableStateSimpleAuth": 1,
+                "DataTableState": 1,
+                "Configuration": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "addon/configuration.js",
+            "line": 9,
+            "description": "Ember Data Table Light's configuration object.\n\nTo change any of these values, set them on the application's environment object, e.g.:\n\n```js\n// config/environment.js\nENV['ember-data-table-light'] = {\n  stateStorage: 'simple-auth'\n};\n```"
+        }
+    },
+    "classes": {
+        "ColumnChooser": {
+            "name": "ColumnChooser",
+            "shortname": "ColumnChooser",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/data-table/column-chooser.js",
+            "line": 4,
+            "extends": "Ember.Component"
+        },
+        "Empty": {
+            "name": "Empty",
+            "shortname": "Empty",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/data-table/empty.js",
+            "line": 4,
+            "extends": "Ember.Component"
+        },
+        "Footer": {
+            "name": "Footer",
+            "shortname": "Footer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/data-table/footer.js",
+            "line": 4,
+            "extends": "Ember.Component"
+        },
+        "Header": {
+            "name": "Header",
+            "shortname": "Header",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/data-table/header.js",
+            "line": 4,
+            "extends": "Ember.Component"
+        },
+        "Loading": {
+            "name": "Loading",
+            "shortname": "Loading",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/data-table/loading.js",
+            "line": 4,
+            "extends": "Ember.Component"
+        },
+        "Pagination": {
+            "name": "Pagination",
+            "shortname": "Pagination",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/data-table/pagination.js",
+            "line": 4,
+            "extends": "Ember.Component"
+        },
+        "Search": {
+            "name": "Search",
+            "shortname": "Search",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/data-table/search.js",
+            "line": 4,
+            "extends": "Ember.Component"
+        },
+        "CheckboxCell": {
+            "name": "CheckboxCell",
+            "shortname": "CheckboxCell",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/light-table/cells/checkbox.js",
+            "line": 7,
+            "extends": "Cell"
+        },
+        "EditableCell": {
+            "name": "EditableCell",
+            "shortname": "EditableCell",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/light-table/cells/editable.js",
+            "line": 7,
+            "extends": "Cell"
+        },
+        "CheckboxColumn": {
+            "name": "CheckboxColumn",
+            "shortname": "CheckboxColumn",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/light-table/columns/checkbox.js",
+            "line": 7,
+            "extends": "Column"
+        },
+        "DataTable": {
+            "name": "DataTable",
+            "shortname": "DataTable",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/components/data-table.js",
+            "line": 12,
+            "extends": "Ember.Component",
+            "uses": [
+                "EmberDataTableMixin",
+                "TablePaginationMixin",
+                "TableSortingMixin"
+            ]
+        },
+        "EmberDataTableMixin": {
+            "name": "EmberDataTableMixin",
+            "shortname": "EmberDataTableMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "DataTable"
+            ],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/mixins/ember-data-table.js",
+            "line": 5,
+            "extends": "Ember.Mixin"
+        },
+        "TablePaginationMixin": {
+            "name": "TablePaginationMixin",
+            "shortname": "TablePaginationMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "DataTable"
+            ],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/mixins/table-pagination.js",
+            "line": 5,
+            "description": "Mixin that adds support for pagination in a table.",
+            "extends": "Ember.Mixin"
+        },
+        "TableSortingMixin": {
+            "name": "TableSortingMixin",
+            "shortname": "TableSortingMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "DataTable"
+            ],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/mixins/table-sorting.js",
+            "line": 5,
+            "description": "Mixin that adds support for sorting in a table.",
+            "extends": "Ember.Mixin"
+        },
+        "DataTableStateLocalStorage": {
+            "name": "DataTableStateLocalStorage",
+            "shortname": "DataTableStateLocalStorage",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/services/data-table-state-local-storage.js",
+            "line": 4,
+            "extends": "DataTableState"
+        },
+        "DataTableStateSimpleAuth": {
+            "name": "DataTableStateSimpleAuth",
+            "shortname": "DataTableStateSimpleAuth",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/services/data-table-state-simple-auth.js",
+            "line": 6,
+            "extends": "DataTableState"
+        },
+        "DataTableState": {
+            "name": "DataTableState",
+            "shortname": "DataTableState",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/services/data-table-state.js",
+            "line": 5,
+            "extends": "Ember.Service"
+        },
+        "Configuration": {
+            "name": "Configuration",
+            "shortname": "Configuration",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-data-table-light/configuration",
+            "file": "addon/configuration.js",
+            "line": 9,
+            "description": "Ember Data Table Light's configuration object.\n\nTo change any of these values, set them on the application's environment object, e.g.:\n\n```js\n// config/environment.js\nENV['ember-data-table-light'] = {\n  stateStorage: 'simple-auth'\n};\n```",
+            "extends": "Object",
+            "access": "public",
+            "tagname": ""
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "addon/components/data-table/pagination.js",
+            "line": 13,
+            "description": "Current page number.",
+            "itemtype": "property",
+            "name": "currentPage",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "Pagination"
+        },
+        {
+            "file": "addon/components/data-table/pagination.js",
+            "line": 22,
+            "description": "Total number of pages available in pagination.",
+            "itemtype": "property",
+            "name": "totalPages",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "Pagination"
+        },
+        {
+            "file": "addon/components/data-table/pagination.js",
+            "line": 31,
+            "description": "The first page number, if it exists. If there are no pages to paginate,\nthis property has the value `false`. Otherwise, it will be always `1`.",
+            "itemtype": "property",
+            "name": "firstPage",
+            "type": "Number|Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "Pagination"
+        },
+        {
+            "file": "addon/components/data-table/pagination.js",
+            "line": 47,
+            "description": "Number of the previous page. If the current page is the first one, this\nproperty has the value `false`, as there is no previous page to be shown.",
+            "itemtype": "property",
+            "name": "previousPage",
+            "type": "Number|Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "Pagination"
+        },
+        {
+            "file": "addon/components/data-table/pagination.js",
+            "line": 66,
+            "description": "Number of the next page. If the current page is the last one, this property\nhas the value `false`, as there is no next page to be shown.",
+            "itemtype": "property",
+            "name": "nextPage",
+            "type": "Number|Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "Pagination"
+        },
+        {
+            "file": "addon/components/data-table/pagination.js",
+            "line": 85,
+            "description": "The last page number, if it exists. If there are no pages to paginate,\nthis property has the value `false`.",
+            "itemtype": "property",
+            "name": "lastPage",
+            "type": "Number|Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "Pagination"
+        },
+        {
+            "file": "addon/components/data-table/pagination.js",
+            "line": 95,
+            "description": "Array with all page numbers, numbered from 1 to the last page number.",
+            "itemtype": "property",
+            "name": "pageNumbers",
+            "type": "Number[]",
+            "access": "public",
+            "tagname": "",
+            "class": "Pagination"
+        },
+        {
+            "file": "addon/components/data-table/pagination.js",
+            "line": 114,
+            "description": "Action executed when the current page is changed.",
+            "itemtype": "event",
+            "name": "pageChanged",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "Number of the new page.",
+                    "type": "Number"
+                }
+            ],
+            "class": "Pagination"
+        },
+        {
+            "file": "addon/components/data-table/search.js",
+            "line": 12,
+            "description": "Text entered by the user in the search field.",
+            "itemtype": "property",
+            "name": "searchText",
+            "type": "String",
+            "default": "''",
+            "access": "protected",
+            "tagname": "",
+            "class": "Search"
+        },
+        {
+            "file": "addon/components/data-table/search.js",
+            "line": 22,
+            "description": "Text used as placeholder for the search field.",
+            "itemtype": "property",
+            "name": "inputPlaceholder",
+            "type": "String",
+            "default": "'Search...'",
+            "access": "public",
+            "tagname": "",
+            "class": "Search"
+        },
+        {
+            "file": "addon/components/data-table/search.js",
+            "line": 32,
+            "description": "CSS class name for an icon to be shown in the search button.",
+            "itemtype": "property",
+            "name": "searchButtonIcon",
+            "type": "String",
+            "default": "'fa fa-search'",
+            "access": "public",
+            "tagname": "",
+            "class": "Search"
+        },
+        {
+            "file": "addon/components/data-table/search.js",
+            "line": 42,
+            "description": "Text used on the search button.",
+            "itemtype": "property",
+            "name": "searchButtonText",
+            "type": "String",
+            "default": "'Search'",
+            "access": "public",
+            "tagname": "",
+            "class": "Search"
+        },
+        {
+            "file": "addon/components/data-table/search.js",
+            "line": 53,
+            "description": "Action called when the user submit the search.",
+            "itemtype": "event",
+            "name": "search",
+            "params": [
+                {
+                    "name": "searchText",
+                    "description": "Text to search.",
+                    "type": "String"
+                }
+            ],
+            "class": "Search"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 22,
+            "description": "Configures if the table should have a search field or not. The component\nthat is used to create the search field can be configured with the\n{{#crossLink \"DataTable/searchComponent:attribute\"}}{{/crossLink}}\nattribute.",
+            "itemtype": "property",
+            "name": "search",
+            "type": "Boolean",
+            "default": "true",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 35,
+            "description": "Component that is used to create the search field.",
+            "itemtype": "property",
+            "name": "searchComponent",
+            "type": "String",
+            "default": "'data-table/search'",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 45,
+            "description": "Configures if the table should have a dropdown menu to choose the visible\ncolumns. The component that is used can be configured with the\n{{#crossLink \"DataTable/columnChooserComponent:attribute\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "columnChooser",
+            "type": "Boolean",
+            "default": "true",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 57,
+            "description": "Component that is used to render a column chooser. The default component\nrequires the [ember-bootstrap](https://github.com/kaliber5/ember-bootstrap)\naddon.",
+            "itemtype": "property",
+            "name": "columnChooserComponent",
+            "type": "String",
+            "default": "'data-table/column-chooser'",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 69,
+            "description": "Componente para ser exibido quando a tabela estiver vazia.",
+            "itemtype": "property",
+            "name": "emptyComponent",
+            "type": "String",
+            "default": "'data-table/empty'",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 79,
+            "description": "Component used to indicate that the table is loading.",
+            "itemtype": "property",
+            "name": "loadingComponent",
+            "type": "String",
+            "default": "'data-table/loading'",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 89,
+            "description": "Indicates if the table has one or more selected rows.",
+            "itemtype": "property",
+            "name": "hasSeletion",
+            "type": "Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 98,
+            "description": "Configures if the table supports bulk actions for the selected records. If\nyou set this to `true`, you must also set a value for\n{{#crossLink \"DataTable/bulkActionsComponent:attribute\"}}{{/crossLink}}.",
+            "itemtype": "property",
+            "name": "bulkActions",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 110,
+            "description": "Component used to render the bulk actions. It's visible only when there\nare rows selected in the table.",
+            "itemtype": "property",
+            "name": "bulkActionsComponent",
+            "type": "String",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 121,
+            "description": "Configures if the table should have a pagination component. The component\nused to show the pagination can be configured with the\n{{#crossLink \"DataTable/paginationComponent:attribute\"}}{{/crossLink}}\noption.",
+            "itemtype": "property",
+            "name": "pagination",
+            "type": "Boolean",
+            "default": "true",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 134,
+            "description": "Component used to render the pagination for the table.",
+            "itemtype": "property",
+            "name": "paginationComponent",
+            "type": "String",
+            "default": "'data-table/pagination'",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 144,
+            "description": "Configures if the table state must be saved. Currently, this saves only\nwhat columns are visible in the table, but this may be extended to save\nmore properties.",
+            "itemtype": "property",
+            "name": "saveState",
+            "type": "Boolean",
+            "default": "true",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 156,
+            "description": "Unique identifier for this table (must be constant across page refreshes),\nused to load and save the state. If this option is not specified, the\nmodel name is used instead.",
+            "itemtype": "property",
+            "name": "identifier",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 167,
+            "description": "Configures the service used to save the table state. Currently, the\navailable options are `local-storage` and `simple-auth`, but you can also\ndefine yours.",
+            "itemtype": "property",
+            "name": "stateStorage",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 178,
+            "description": "Instance of the service used to save the table state. This is loaded based\non the {{#crossLink \"DataTable/stateStorage:attribute\"}}{{/crossLink}}\noption.",
+            "itemtype": "property",
+            "name": "stateService",
+            "type": "DataTableState",
+            "access": "protected",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 189,
+            "description": "Table columns.",
+            "itemtype": "property",
+            "name": "columns",
+            "type": "Object[]",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 198,
+            "description": "Table object for ember-light-table.",
+            "itemtype": "property",
+            "name": "table",
+            "type": "Table",
+            "access": "protected",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/mixins/ember-data-table.js",
+            "line": 12,
+            "description": "Ember Data model name to show in the table.",
+            "itemtype": "property",
+            "name": "modelName",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "EmberDataTableMixin"
+        },
+        {
+            "file": "addon/mixins/ember-data-table.js",
+            "line": 21,
+            "description": "Indicates if the table is currently loading data from Ember Data store.",
+            "itemtype": "property",
+            "name": "isLoading",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "EmberDataTableMixin"
+        },
+        {
+            "file": "addon/mixins/ember-data-table.js",
+            "line": 31,
+            "description": "Text used in search.",
+            "itemtype": "property",
+            "name": "searchText",
+            "type": "String",
+            "default": "''",
+            "access": "public",
+            "tagname": "",
+            "class": "EmberDataTableMixin"
+        },
+        {
+            "file": "addon/mixins/ember-data-table.js",
+            "line": 41,
+            "description": "Builds the object used as second parameter to the\n{{#crossLink \"DS.Store/query:method\"}}{{/crossLink}} method in the store.",
+            "itemtype": "method",
+            "name": "_getFilters",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "EmberDataTableMixin"
+        },
+        {
+            "file": "addon/mixins/ember-data-table.js",
+            "line": 69,
+            "description": "Query records from Ember Data store, using the configured filter options\n(pagination, sorting and search).",
+            "itemtype": "method",
+            "name": "_fetchData",
+            "access": "protected",
+            "tagname": "",
+            "class": "EmberDataTableMixin"
+        },
+        {
+            "file": "addon/mixins/table-pagination.js",
+            "line": 12,
+            "description": "Current page number.",
+            "itemtype": "property",
+            "name": "currentPage",
+            "type": "Number",
+            "default": "1",
+            "access": "public",
+            "tagname": "",
+            "class": "TablePaginationMixin"
+        },
+        {
+            "file": "addon/mixins/table-pagination.js",
+            "line": 22,
+            "description": "Number of records shown by page.",
+            "itemtype": "property",
+            "name": "recordsPerPage",
+            "type": "Number",
+            "default": "50",
+            "access": "public",
+            "tagname": "",
+            "class": "TablePaginationMixin"
+        },
+        {
+            "file": "addon/mixins/table-pagination.js",
+            "line": 32,
+            "description": "Total number of records that are paginated. This is used to calculate the number of pages.",
+            "itemtype": "property",
+            "name": "totalRecords",
+            "type": "Number",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "TablePaginationMixin"
+        },
+        {
+            "file": "addon/mixins/table-pagination.js",
+            "line": 42,
+            "description": "Number of existing pages, calculated from {{#crossLink TablePagination#currentPage}}currentPage{{/crossLink}} and\n{{#crossLink TablePagination#recordsPerPage}}recordsPerPage{{/crossLink}}",
+            "itemtype": "property",
+            "name": "pageNumbers",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "TablePaginationMixin"
+        },
+        {
+            "file": "addon/mixins/table-sorting.js",
+            "line": 12,
+            "description": "Property that is used for sorting the table.",
+            "itemtype": "property",
+            "name": "sortProperty",
+            "type": "String",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "TableSortingMixin"
+        },
+        {
+            "file": "addon/mixins/table-sorting.js",
+            "line": 22,
+            "description": "Sort direction ('asc' or 'desc).",
+            "itemtype": "property",
+            "name": "direction",
+            "type": "String",
+            "default": "'asc'",
+            "access": "public",
+            "tagname": "",
+            "class": "TableSortingMixin"
+        },
+        {
+            "file": "addon/mixins/table-sorting.js",
+            "line": 32,
+            "description": "Determines if the table is sorted or not.",
+            "itemtype": "property",
+            "name": "hasSorting",
+            "type": "Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "TableSortingMixin"
+        },
+        {
+            "file": "addon/mixins/table-sorting.js",
+            "line": 47,
+            "description": "Configures table sorting for specified `column` and `direction`.",
+            "itemtype": "method",
+            "name": "sortColumn",
+            "params": [
+                {
+                    "name": "property",
+                    "description": "Property name for the column to be sorted by.",
+                    "type": "String"
+                },
+                {
+                    "name": "direction",
+                    "description": "Sort direction ('asc' or 'desc).",
+                    "type": "String"
+                }
+            ],
+            "access": "public",
+            "tagname": "",
+            "class": "TableSortingMixin"
+        },
+        {
+            "file": "addon/mixins/table-sorting.js",
+            "line": 60,
+            "description": "Clear table sorting previously defined with {{#crossLink TableSorting#sortColumn:method}}sortColumn{{/crossLink}}.",
+            "itemtype": "method",
+            "name": "removeSorting",
+            "access": "public",
+            "tagname": "",
+            "class": "TableSortingMixin"
+        },
+        {
+            "file": "addon/services/data-table-state.js",
+            "line": 10,
+            "description": "Serializes the current state of the table to be saved.",
+            "params": [
+                {
+                    "name": "table",
+                    "description": "Object for the table to be serialized.",
+                    "type": "Table"
+                }
+            ],
+            "return": {
+                "description": "state Serialized state for the table.",
+                "type": "Mixed"
+            },
+            "class": "DataTableState"
+        },
+        {
+            "file": "addon/services/data-table-state.js",
+            "line": 22,
+            "description": "Deserializes a saved state and applies it's values to the table.",
+            "params": [
+                {
+                    "name": "table",
+                    "description": "Table object where the state is to be applied.",
+                    "type": "Table"
+                },
+                {
+                    "name": "state",
+                    "description": "Saved state object the be applied.",
+                    "type": "Mixed"
+                }
+            ],
+            "class": "DataTableState"
+        },
+        {
+            "file": "addon/services/data-table-state.js",
+            "line": 34,
+            "description": "Saves the current state of the table.",
+            "params": [
+                {
+                    "name": "identifier",
+                    "description": "Unique identifier for the table, used later to\nload the status.",
+                    "type": "String"
+                },
+                {
+                    "name": "state",
+                    "description": "Table state as returned by `serialize()`.",
+                    "type": "Mixed"
+                },
+                {
+                    "name": "table",
+                    "description": "Object for the table that should be saved.",
+                    "type": "Table"
+                }
+            ],
+            "class": "DataTableState"
+        },
+        {
+            "file": "addon/services/data-table-state.js",
+            "line": 46,
+            "description": "Loads a previously saved state for a table.",
+            "params": [
+                {
+                    "name": "identifier",
+                    "description": "Unique identifier for the table to load status.",
+                    "type": "String"
+                },
+                {
+                    "name": "table",
+                    "description": "Object for the table that should be loaded.",
+                    "type": "Table"
+                }
+            ],
+            "return": {
+                "description": "Saved state for the specified table, that will be passed\n  to `deserialize()`.",
+                "type": "Mixed"
+            },
+            "class": "DataTableState"
+        },
+        {
+            "file": "addon/configuration.js",
+            "line": 27,
+            "description": "The storage used to save table's state.",
+            "itemtype": "property",
+            "name": "stateStorage",
+            "readonly": "",
+            "static": 1,
+            "type": "String",
+            "default": "'local-storage'",
+            "access": "public",
+            "tagname": "",
+            "class": "Configuration",
+            "module": "ember-data-table-light/configuration"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nSerializes the current state of the table to be saved.",
+            "line": " addon/services/data-table-state.js:10"
+        },
+        {
+            "message": "Missing item type\nDeserializes a saved state and applies it's values to the table.",
+            "line": " addon/services/data-table-state.js:22"
+        },
+        {
+            "message": "Missing item type\nSaves the current state of the table.",
+            "line": " addon/services/data-table-state.js:34"
+        },
+        {
+            "message": "Missing item type\nLoads a previously saved state for a table.",
+            "line": " addon/services/data-table-state.js:46"
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>addon/services/data-table-state.js - ember-data-table-light</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="ember-data-table-light" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: v0.0.1</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/CheckboxCell.html">CheckboxCell</a></li>
+                                <li><a href="../classes/CheckboxColumn.html">CheckboxColumn</a></li>
+                                <li><a href="../classes/ColumnChooser.html">ColumnChooser</a></li>
+                                <li><a href="../classes/Configuration.html">Configuration</a></li>
+                                <li><a href="../classes/DataTable.html">DataTable</a></li>
+                                <li><a href="../classes/DataTableState.html">DataTableState</a></li>
+                                <li><a href="../classes/DataTableStateLocalStorage.html">DataTableStateLocalStorage</a></li>
+                                <li><a href="../classes/DataTableStateSimpleAuth.html">DataTableStateSimpleAuth</a></li>
+                                <li><a href="../classes/EditableCell.html">EditableCell</a></li>
+                                <li><a href="../classes/EmberDataTableMixin.html">EmberDataTableMixin</a></li>
+                                <li><a href="../classes/Empty.html">Empty</a></li>
+                                <li><a href="../classes/Footer.html">Footer</a></li>
+                                <li><a href="../classes/Header.html">Header</a></li>
+                                <li><a href="../classes/Loading.html">Loading</a></li>
+                                <li><a href="../classes/Pagination.html">Pagination</a></li>
+                                <li><a href="../classes/Search.html">Search</a></li>
+                                <li><a href="../classes/TablePaginationMixin.html">TablePaginationMixin</a></li>
+                                <li><a href="../classes/TableSortingMixin.html">TableSortingMixin</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/ember-data-table-light_configuration.html">ember-data-table-light/configuration</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: addon/services/data-table-state.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+import Ember from &#x27;ember&#x27;;
+
+const { Service, get, assert } = Ember;
+
+/**
+ * @class DataTableState
+ * @extends Ember.Service
+ */
+export default Service.extend({
+  /**
+   * Serializes the current state of the table to be saved.
+   *
+   * @param {Table} table Object for the table to be serialized.
+   * @return {mixed} state Serialized state for the table.
+   */
+  serialize(table) {
+    let visibleColumns = get(table, &#x27;visibleColumns&#x27;).mapBy(&#x27;valuePath&#x27;);
+
+    return {visibleColumns};
+  },
+
+  /**
+   * Deserializes a saved state and applies it&#x27;s values to the table.
+   *
+   * @param {Table} table Table object where the state is to be applied.
+   * @param {mixed} state Saved state object the be applied.
+   */
+  deserialize(table, state) {
+    get(table, &#x27;columns&#x27;).filter((item) =&gt; {
+      return state.visibleColumns.indexOf(item.get(&#x27;valuePath&#x27;)) === -1;
+    }).setEach(&#x27;hidden&#x27;, true);
+  },
+
+  /**
+   * Saves the current state of the table.
+   *
+   * @param {String} identifier Unique identifier for the table, used later to
+   * load the status.
+   * @param {mixed} state Table state as returned by &#x60;serialize()&#x60;.
+   * @param {Table} table Object for the table that should be saved.
+   */
+  save(/* identifier, state, table */) {
+    assert(&#x27;The save method must be implemented by a subclass&#x27;);
+  },
+
+  /**
+   * Loads a previously saved state for a table.
+   *
+   * @param {String} identifier Unique identifier for the table to load status.
+   * @param {Table} table Object for the table that should be loaded.
+   * @return {mixed} Saved state for the specified table, that will be passed
+   *   to &#x60;deserialize()&#x60;.
+   */
+  load(/* identifier, table */) {
+    assert(&#x27;The load method must be implemented by a subclass&#x27;);
+  }
+});
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
