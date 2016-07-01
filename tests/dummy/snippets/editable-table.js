@@ -1,12 +1,6 @@
 import Ember from 'ember';
 
-const {
-  Controller
-} = Ember;
-
-export default Controller.extend({
-  collapseCodeSnippet: true,
-  activeTab: 0,
+export default Ember.Component.extend({
   columns: [
     {
       label: 'First Name',
@@ -33,11 +27,5 @@ export default Controller.extend({
       label: 'Country',
       valuePath: 'country'
     }
-  ],
-
-  actions: {
-    setActiveTab(tab) {
-      this.set('activeTab', tab);
-    }
-  }
+  ]
 });

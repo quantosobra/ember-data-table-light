@@ -1,13 +1,7 @@
 import Ember from 'ember';
 import CheckboxColumn from 'ember-data-table-light/columns/checkbox';
 
-const {
-  Controller
-} = Ember;
-
-export default Controller.extend({
-  collapseCodeSnippet: true,
-  activeTab: 0,
+export default Ember.Component.extend({
   columns: [
     CheckboxColumn,
     {
@@ -32,11 +26,5 @@ export default Controller.extend({
       label: 'Country',
       valuePath: 'country'
     }
-  ],
-
-  actions: {
-    setActiveTab(tab) {
-      this.set('activeTab', tab);
-    }
-  }
+  ]
 });

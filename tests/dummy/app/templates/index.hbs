@@ -1,22 +1,26 @@
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel-group" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="table-1">
-      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#code-snippet" aria-expanded="true" aria-controls="code-snippet">
+      <a role="button" {{action (toggle "collapseCodeSnippet" this)}} href="#code-snippet" aria-expanded="true" aria-controls="code-snippet">
         <h4 class="panel-title">Simple Example <span class="code-icon fa fa-code pull-right"></span></h4>
       </a>
     </div>
-    <div id="code-snippet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="table-1">
+    {{#bs-collapse collapsed=collapseCodeSnippet id="code-snippet" class="panel-collapse" role="tabpanel" aria-labelledby="table-1"}}
       <div class="panel-body code-snippet">
        <ul class="nav nav-tabs" role="tablist">
-         <li role="presentation" class="active"><a href="#component" aria-controls="component" role="tab" data-toggle="tab">component.js</a></li>
-         <li role="presentation"><a href="#template" aria-controls="template" role="tab" data-toggle="tab">template.hbs</a></li>
+         <li role="presentation" class="{{if (eq activeTab 0) 'active'}}">
+           <a {{action "setActiveTab" 0}} href="#component" aria-controls="component" role="tab">component.js</a>
+         </li>
+         <li role="presentation" class="{{if (eq activeTab 1) 'active'}}">
+           <a {{action "setActiveTab" 1}} href="#template" aria-controls="template" role="tab">template.hbs</a>
+         </li>
        </ul>
        <div class="tab-content">
-         <div role="tabpanel" class="tab-pane fade in active" id="component">{{!code-snippet name="simple-table.js"}}</div>
-         <div role="tabpanel" class="tab-pane fade" id="template">{{!code-snippet name="simple-table.hbs"}}</div>
+         <div role="tabpanel" class="tab-pane fade {{if (eq activeTab 0) 'active in'}}" id="component">{{code-snippet name="simple-table.js"}}</div>
+         <div role="tabpanel" class="tab-pane fade {{if (eq activeTab 1) 'active in'}}" id="template">{{code-snippet name="simple-table.hbs"}}</div>
        </div>
       </div>
-    </div>
+    {{/bs-collapse}}
     <div class="panel-body table-container fixed-header">
       {{!-- BEGIN-SNIPPET simple-table --}}
       {{data-table 'user' columns=columns height='50vh'}}
