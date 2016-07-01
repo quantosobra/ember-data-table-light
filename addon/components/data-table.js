@@ -262,7 +262,7 @@ const DataTable = Component.extend(EmberDataTableMixin, TablePaginationMixin, Ta
     },
 
     makeSearch(searchText) {
-      this.set('search', searchText);
+      this.set('searchText', searchText);
       this._fetchData();
     },
 
