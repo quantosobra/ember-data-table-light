@@ -3,6 +3,7 @@
   "description": "Tables for Ember Data models based on Ember Light Table.",
   "url": "http://github.com/quantosobra/ember-data-table-light",
   "options": {
+    "themedir": "node_modules/yuidoc-theme-quantosobra",
     "enabledEnvironments": ["production"],
     "paths": [
       "app",
@@ -12,7 +13,7 @@
       "data": [
         {
           "base": "http://emberjs.com/api/",
-          "json": "http://builds.emberjs.com/tags/v2.4.0/ember-docs.json"
+          "json": "http://builds.emberjs.com/tags/v2.6.0/ember-docs.json"
         },
         {
           "base": "http://emberjs.com/api/data/",
@@ -23,7 +24,6 @@
     "exclude": "vendor",
     "outdir": "docs",
     "linkNatives": true,
-    "quiet": true,
     "parseOnly": false,
     "lint": false,
     "nocode": false
