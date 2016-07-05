@@ -19,9 +19,9 @@ ember install ember-data-table-light
 
 ## Helpful Links
 
-- ### [Live Demo](http://quantosobra.github.io/ember-data-table-light)
-
-- ### [Changelog](CHANGELOG.md)
+- **[Live Demo](http://quantosobra.github.io/ember-data-table-light)**
+- **[API docs](http://quantosobra.github.io/ember-data-table-light/docs)**
+- **[Changelog](CHANGELOG.md)**
 
 ## Looking for help?
 If it is a bug [please open an issue on GitHub](http://github.com/quantosobra/ember-data-table-light/issues).
