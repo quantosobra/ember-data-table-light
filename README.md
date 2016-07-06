@@ -10,6 +10,7 @@
 
 ## Features
 
+Ember Data Table Light provides and easy way to create an [Ember Light Table](https://github.com/offirgolan/ember-light-table) from an [Ember Data](https://github.com/emberjs/data) model. If you want more control over the table, you should consider using Ember Light Table directly.
 
 ## Installation
 
