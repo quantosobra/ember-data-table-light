@@ -1,13 +1,17 @@
 import Ember from 'ember';
 import CheckboxColumn from 'ember-data-table-light/columns/checkbox';
+import Table from 'ember-light-table';
 
 const {
   Controller
 } = Ember;
 
 export default Controller.extend({
-  collapseCodeSnippet: true,
-  activeTab: 0,
+
+  init() {
+    this._super(...arguments);
+    this.set('table', new Table(this.get('columns')));
+  },
 
   columns: [
     CheckboxColumn,
@@ -32,12 +36,18 @@ export default Controller.extend({
     {
       label: 'Country',
       valuePath: 'country'
+    },
+    {
+      cellComponent: 'custom-actions',
+      hideable: false
     }
   ],
 
   actions: {
-    setActiveTab(tab) {
-      this.set('activeTab', tab);
+    deleteUser(row) {
+      row.get('content').destroyRecord().then(()=> {
+        this.get('table').removeRow(row);
+      });
     }
   }
 });

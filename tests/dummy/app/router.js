@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('editable');
+  this.route('custom-actions');
 });
 
 export default Router;
