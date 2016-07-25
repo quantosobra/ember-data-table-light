@@ -23,6 +23,13 @@ export default function() {
     limit = limit || 20;
     dir = dir || 'asc';
 
+    if (search) {
+      let searchRegex = new RegExp(search, 'i');
+      users = _.filter(users, function(user) {
+        return searchRegex.test(user.firstName);
+      });
+    }
+
     if (sort) {
       users = _.sortBy(users, sort);
       if (dir !== 'asc') {
