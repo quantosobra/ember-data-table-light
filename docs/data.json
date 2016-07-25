@@ -3,7 +3,7 @@
         "name": "ember-data-table-light",
         "description": "Tables for Ember Data models based on Ember Light Table.",
         "url": "http://github.com/quantosobra/ember-data-table-light",
-        "version": "0.0.1.9ed8893f"
+        "version": "v0.0.2"
     },
     "files": {
         "addon/components/data-table/column-chooser.js": {
@@ -803,6 +803,17 @@
         {
             "file": "addon/components/data-table.js",
             "line": 198,
+            "description": "Table actions.",
+            "itemtype": "property",
+            "name": "tableActions",
+            "type": "{Object}",
+            "access": "public",
+            "tagname": "",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 208,
             "description": "Table object for ember-light-table.",
             "itemtype": "property",
             "name": "table",

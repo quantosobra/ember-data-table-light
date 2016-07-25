@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-data-table-light</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: 0.0.1.9ed8893f
+        API Docs for: v0.0.2
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -289,6 +289,16 @@
                 columns: [],
               
                 /**
+                 * Table actions.
+                 *
+                 * @property tableActions
+                 * @type {Object}
+                 * @public
+                 */
+                tableActions: null,
+              
+              
+                /**
                  * Table object for ember-light-table.
                  *
                  * @property table
@@ -310,7 +320,9 @@
                     !isEmpty(this.get(&#x27;columns&#x27;))
                   );
               
-                  this.table = new Table(this.get(&#x27;columns&#x27;));
+                  if (this.table === null) {
+                    this.table = new Table(this.get(&#x27;columns&#x27;));
+                  }
                   this._setupState();
                   this._fetchData();
                 },
