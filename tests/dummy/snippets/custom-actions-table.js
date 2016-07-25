@@ -2,12 +2,7 @@ import Ember from 'ember';
 import CheckboxColumn from 'ember-data-table-light/columns/checkbox';
 import Table from 'ember-light-table';
 
-const {
-  Controller
-} = Ember;
-
-export default Controller.extend({
-
+export default Ember.Component.extend({
   init() {
     this._super(...arguments);
     this.set('table', new Table(this.get('columns')));
