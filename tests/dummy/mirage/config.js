@@ -46,6 +46,8 @@ export default function() {
     schema.users.find(request.params.id).update(data.user);
   });
 
+  this.del('/users/:id');
+
   /*
     Shorthand cheatsheet:
 

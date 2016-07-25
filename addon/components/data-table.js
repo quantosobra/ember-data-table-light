@@ -196,6 +196,16 @@ const DataTable = Component.extend(EmberDataTableMixin, TablePaginationMixin, Ta
   columns: [],
 
   /**
+   * Table actions.
+   *
+   * @property tableActions
+   * @type {Object}
+   * @public
+   */
+  tableActions: null,
+
+
+  /**
    * Table object for ember-light-table.
    *
    * @property table
@@ -217,7 +227,9 @@ const DataTable = Component.extend(EmberDataTableMixin, TablePaginationMixin, Ta
       !isEmpty(this.get('columns'))
     );
 
-    this.table = new Table(this.get('columns'));
+    if (this.table === null) {
+      this.table = new Table(this.get('columns'));
+    }
     this._setupState();
     this._fetchData();
   },

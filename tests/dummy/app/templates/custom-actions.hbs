@@ -1,0 +1,34 @@
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="table-1">
+      <a role="button" {{action (toggle "collapseCodeSnippet" this)}} href="#code-snippet" aria-expanded="true" aria-controls="code-snippet">
+        <h4 class="panel-title">Custom Actions Example <span class="code-icon fa fa-code pull-right"></span></h4>
+      </a>
+    </div>
+    {{#bs-collapse collapsed=collapseCodeSnippet id="code-snippet" class="panel-collapse" role="tabpanel" aria-labelledby="table-1"}}
+      <div class="panel-body code-snippet">
+       <ul class="nav nav-tabs" role="tablist">
+         <li role="presentation" class="{{if (eq activeTab 0) 'active'}}">
+           <a {{action "setActiveTab" 0}} href="#component" aria-controls="component" role="tab">component.js</a>
+         </li>
+         <li role="presentation" class="{{if (eq activeTab 1) 'active'}}">
+           <a {{action "setActiveTab" 1}} href="#template" aria-controls="template" role="tab">template.hbs</a>
+         </li>
+         <li role="presentation" class="{{if (eq activeTab 2) 'active'}}">
+           <a {{action "setActiveTab" 2}} href="#template" aria-controls="component" role="tab">custom-actions.hbs</a>
+         </li>
+       </ul>
+       <div class="tab-content">
+         <div role="tabpanel" class="tab-pane fade {{if (eq activeTab 0) 'active in'}}" id="component">{{code-snippet name="custom-actions-table.js"}}</div>
+         <div role="tabpanel" class="tab-pane fade {{if (eq activeTab 1) 'active in'}}" id="template">{{code-snippet name="simple-table.hbs"}}</div>
+         <div role="tabpanel" class="tab-pane fade {{if (eq activeTab 2) 'active in'}}" id="template">{{code-snippet name="custom-actions.hbs"}}</div>
+       </div>
+      </div>
+    {{/bs-collapse}}
+    <div class="panel-body table-container fixed-header">
+      {{!-- BEGIN-SNIPPET simple-table --}}
+      {{data-table 'user' tableActions=(hash deleteUser=(action 'deleteUser')) columns=columns table=table height='50vh'}}
+      {{!-- END-SNIPPET --}}
+    </div>
+  </div>
+</div>
