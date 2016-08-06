@@ -24,7 +24,7 @@
     onColumnClick=(action 'onColumnClick')
   }}
 
-  {{#t.body multiSelect=true as |body|}}
+  {{#t.body multiSelect=multiSelect autoHideScrollbar=autoHideScrollbar as |body|}}
     {{#if (and isLoading loadingComponent)}}
       {{#body.loader}}
         {{component loadingComponent table=table}}
