@@ -3,7 +3,7 @@
         "name": "ember-data-table-light",
         "description": "Tables for Ember Data models based on Ember Light Table.",
         "url": "http://github.com/quantosobra/ember-data-table-light",
-        "version": "v0.0.2"
+        "version": "v0.0.3"
     },
     "files": {
         "addon/components/data-table/column-chooser.js": {
@@ -652,6 +652,26 @@
         {
             "file": "addon/components/data-table.js",
             "line": 57,
+            "description": "Allows a user to select multiple rows with the `ctrl`, `cmd`, and `shift` keys.\nThese rows can be easily accessed via `table.get('selectedRows')`",
+            "itemtype": "property",
+            "name": "multiSelect",
+            "type": "{Boolean}",
+            "default": "true",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 67,
+            "description": "Hide scrollbar when not scrolling",
+            "itemtype": "property",
+            "name": "autoHideScrollbar",
+            "type": "{Boolean}",
+            "default": "true",
+            "class": "DataTable"
+        },
+        {
+            "file": "addon/components/data-table.js",
+            "line": 76,
             "description": "Component that is used to render a column chooser. The default component\nrequires the [ember-bootstrap](https://github.com/kaliber5/ember-bootstrap)\naddon.",
             "itemtype": "property",
             "name": "columnChooserComponent",
@@ -663,7 +683,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 69,
+            "line": 88,
             "description": "Componente para ser exibido quando a tabela estiver vazia.",
             "itemtype": "property",
             "name": "emptyComponent",
@@ -675,7 +695,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 79,
+            "line": 98,
             "description": "Component used to indicate that the table is loading.",
             "itemtype": "property",
             "name": "loadingComponent",
@@ -687,7 +707,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 89,
+            "line": 108,
             "description": "Indicates if the table has one or more selected rows.",
             "itemtype": "property",
             "name": "hasSeletion",
@@ -698,7 +718,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 98,
+            "line": 117,
             "description": "Configures if the table supports bulk actions for the selected records. If\nyou set this to `true`, you must also set a value for\n{{#crossLink \"DataTable/bulkActionsComponent:attribute\"}}{{/crossLink}}.",
             "itemtype": "property",
             "name": "bulkActions",
@@ -710,7 +730,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 110,
+            "line": 129,
             "description": "Component used to render the bulk actions. It's visible only when there\nare rows selected in the table.",
             "itemtype": "property",
             "name": "bulkActionsComponent",
@@ -722,7 +742,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 121,
+            "line": 140,
             "description": "Configures if the table should have a pagination component. The component\nused to show the pagination can be configured with the\n{{#crossLink \"DataTable/paginationComponent:attribute\"}}{{/crossLink}}\noption.",
             "itemtype": "property",
             "name": "pagination",
@@ -734,7 +754,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 134,
+            "line": 153,
             "description": "Component used to render the pagination for the table.",
             "itemtype": "property",
             "name": "paginationComponent",
@@ -746,7 +766,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 144,
+            "line": 163,
             "description": "Configures if the table state must be saved. Currently, this saves only\nwhat columns are visible in the table, but this may be extended to save\nmore properties.",
             "itemtype": "property",
             "name": "saveState",
@@ -758,7 +778,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 156,
+            "line": 175,
             "description": "Unique identifier for this table (must be constant across page refreshes),\nused to load and save the state. If this option is not specified, the\nmodel name is used instead.",
             "itemtype": "property",
             "name": "identifier",
@@ -769,7 +789,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 167,
+            "line": 186,
             "description": "Configures the service used to save the table state. Currently, the\navailable options are `local-storage` and `simple-auth`, but you can also\ndefine yours.",
             "itemtype": "property",
             "name": "stateStorage",
@@ -780,7 +800,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 178,
+            "line": 197,
             "description": "Instance of the service used to save the table state. This is loaded based\non the {{#crossLink \"DataTable/stateStorage:attribute\"}}{{/crossLink}}\noption.",
             "itemtype": "property",
             "name": "stateService",
@@ -791,7 +811,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 189,
+            "line": 208,
             "description": "Table columns.",
             "itemtype": "property",
             "name": "columns",
@@ -802,7 +822,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 198,
+            "line": 217,
             "description": "Table actions.",
             "itemtype": "property",
             "name": "tableActions",
@@ -813,7 +833,7 @@
         },
         {
             "file": "addon/components/data-table.js",
-            "line": 208,
+            "line": 227,
             "description": "Table object for ember-light-table.",
             "itemtype": "property",
             "name": "table",

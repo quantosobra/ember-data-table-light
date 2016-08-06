@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-data-table-light</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.0.2
+        API Docs for: v0.0.3
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -146,6 +146,25 @@
                  * @public
                  */
                 columnChooser: true,
+              
+                /**
+                 * Allows a user to select multiple rows with the &#x60;ctrl&#x60;, &#x60;cmd&#x60;, and &#x60;shift&#x60; keys.
+                 * These rows can be easily accessed via &#x60;table.get(&#x27;selectedRows&#x27;)&#x60;
+                 *
+                 * @property multiSelect
+                 * @type {Boolean}
+                 * @default true
+                 */
+                multiselect: true,
+              
+                /**
+                 * Hide scrollbar when not scrolling
+                 *
+                 * @property autoHideScrollbar
+                 * @type {Boolean}
+                 * @default true
+                 */
+                autoHideScrollbar: true,
               
                 /**
                  * Component that is used to render a column chooser. The default component
