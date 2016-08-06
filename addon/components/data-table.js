@@ -55,6 +55,25 @@ const DataTable = Component.extend(EmberDataTableMixin, TablePaginationMixin, Ta
   columnChooser: true,
 
   /**
+   * Allows a user to select multiple rows with the `ctrl`, `cmd`, and `shift` keys.
+   * These rows can be easily accessed via `table.get('selectedRows')`
+   *
+   * @property multiSelect
+   * @type {Boolean}
+   * @default true
+   */
+  multiselect: true,
+
+  /**
+   * Hide scrollbar when not scrolling
+   *
+   * @property autoHideScrollbar
+   * @type {Boolean}
+   * @default true
+   */
+  autoHideScrollbar: true,
+
+  /**
    * Component that is used to render a column chooser. The default component
    * requires the [ember-bootstrap](https://github.com/kaliber5/ember-bootstrap)
    * addon.
